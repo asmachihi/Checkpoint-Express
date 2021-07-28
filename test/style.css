@@ -1,0 +1,98 @@
+:root {
+    --menu-width: 37.5em; /* Width of menu */
+    --items: 4; /* Number of items you have */
+    --item-width: calc(var(--menu-width) / var(--items));
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(45deg, #102eff, #d2379b);
+    font-family: 'Roboto', sans-serif;
+    height: 100vh;
+    overflow: hidden;
+    width: 100vw;
+}
+
+nav {
+    width: var(--menu-width);
+    display: flex;
+    transform-style: preserve-3d;
+    justify-content: space-evenly;
+    position: relative;
+    z-index: 2;
+    margin: 0px auto;
+    perspective: 2000px;
+    flex-wrap: wrap;
+    top: 3em;
+}
+h1{
+    color: white;
+    text-align: center;
+    margin-left: -237px;
+}
+p{
+    text-align: center;
+    color: white;
+}
+
+
+nav .menu-item {
+    color: white;
+    font-weight: 600;
+    transform-style: preserve-3d;
+    flex-grow: 1;
+    display: flex;
+    flex-basis: var(--item-width);
+    box-sizing: border-box;
+    padding: 0em 6.5em;
+    justify-content: center;
+    perspective: 200px;
+    letter-spacing: 5.5px;
+    min-height: 7.5em;
+}
+
+nav .menu-text, nav .menu-text a {
+    font-size: 1em;
+    color: white;
+    text-decoration: none;
+    text-shadow: 0 1px 5px rgba(0,0,0,0.1);
+    transition: color 0.1s ease-out;
+    text-align: center;
+}
+
+nav .menu-text a:hover {
+    color: rgba(255,255,255,0.5);
+}
+
+.menu-text:after {
+    transition: bottom 0.25s ease-out, opacity 0.01s ease-out 0.01s;
+    opacity: 0;
+    content: '';
+    position: absolute;
+    pointer-events: none;
+    bottom: -5em;
+    left: calc(50% - 10px);
+    border-color: transparent transparent white transparent;
+    border-width: 10px;
+    border-style: solid;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
